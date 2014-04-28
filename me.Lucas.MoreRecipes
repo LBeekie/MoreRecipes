@@ -1,0 +1,69 @@
+package me.Lucas.MoreRecipes;
+
+import org.bukkit.Bukkit;
+import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.ShapedRecipe;
+import org.bukkit.inventory.ShapelessRecipe;
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class Main extends JavaPlugin {
+	
+	public void onEnable(){
+		
+		ShapedRecipe goldrecord = new ShapedRecipe(new ItemStack(Material.GOLD_RECORD));
+		goldrecord.shape(new String[]{"YCY","CDC","YCY"}).setIngredient('Y', Material.WOOL).setIngredient('Y', Material.WOOL.getNewData((byte) 4)).setIngredient('C', Material.COAL).setIngredient('D', Material.DIAMOND);
+		Bukkit.getServer().addRecipe(goldrecord);
+		
+		ShapedRecipe greenrecord = new ShapedRecipe(new ItemStack(Material.GREEN_RECORD));
+		greenrecord.shape(new String[]{"LCL","CDC","LCL"}).setIngredient('L', Material.WOOL).setIngredient('L', Material.WOOL.getNewData((byte) 5)).setIngredient('C', Material.COAL).setIngredient('D', Material.DIAMOND);
+		Bukkit.getServer().addRecipe(greenrecord);
+		
+		ShapedRecipe record3 = new ShapedRecipe(new ItemStack(Material.RECORD_3));
+		record3.shape(new String[]{"OCO","CDC","OCO"}).setIngredient('O', Material.WOOL).setIngredient('O', Material.WOOL.getNewData((byte) 1)).setIngredient('C', Material.COAL).setIngredient('D', Material.DIAMOND);
+		Bukkit.getServer().addRecipe(record3);
+		
+		ShapedRecipe record4 = new ShapedRecipe(new ItemStack(Material.RECORD_4));
+		record4.shape(new String[]{"RCR","CDC","RCR"}).setIngredient('R', Material.WOOL).setIngredient('R', Material.WOOL.getNewData((byte) 14)).setIngredient('C', Material.COAL).setIngredient('D', Material.DIAMOND);
+		Bukkit.getServer().addRecipe(record4);
+		
+		ShapedRecipe record5 = new ShapedRecipe(new ItemStack(Material.RECORD_5));
+		record5.shape(new String[]{"LCN","CDC","NCL"}).setIngredient('L', Material.WOOL).setIngredient('L', Material.WOOL.getNewData((byte) 5)).setIngredient('N', Material.WOOL).setIngredient('N', Material.WOOL.getNewData((byte) 9)).setIngredient('C', Material.COAL).setIngredient('D', Material.DIAMOND);
+		Bukkit.getServer().addRecipe(record5);
+		
+		ShapedRecipe record6 = new ShapedRecipe(new ItemStack(Material.RECORD_6));
+		record6.shape(new String[]{"PCP","CDC","PCP"}).setIngredient('P', Material.WOOL).setIngredient('P', Material.WOOL.getNewData((byte) 10)).setIngredient('C', Material.COAL).setIngredient('D', Material.DIAMOND);
+		Bukkit.getServer().addRecipe(record6);
+		
+		ShapedRecipe record7 = new ShapedRecipe(new ItemStack(Material.RECORD_7));
+		record7.shape(new String[]{"WCM","CDC","MCW"}).setIngredient('W', Material.WOOL).setIngredient('W', Material.WOOL.getNewData((byte) 0)).setIngredient('M', Material.WOOL).setIngredient('M', Material.WOOL.getNewData((byte) 2)).setIngredient('C', Material.COAL).setIngredient('D', Material.DIAMOND);
+		Bukkit.getServer().addRecipe(record7);
+		
+		ShapedRecipe record8 = new ShapedRecipe(new ItemStack(Material.RECORD_8));
+		record8.shape(new String[]{"BCB","CDC","BCB"}).setIngredient('B', Material.WOOL).setIngredient('B', Material.WOOL.getNewData((byte) 15)).setIngredient('C', Material.COAL).setIngredient('D', Material.DIAMOND);
+		Bukkit.getServer().addRecipe(record8);
+		
+		ShapedRecipe record9 = new ShapedRecipe(new ItemStack(Material.RECORD_9));
+		record9.shape(new String[]{"WCW","CDC","WCW"}).setIngredient('W', Material.WOOL).setIngredient('W', Material.WOOL.getNewData((byte) 0)).setIngredient('C', Material.COAL).setIngredient('D', Material.DIAMOND);
+		Bukkit.getServer().addRecipe(record9);
+		
+		ShapedRecipe record10 = new ShapedRecipe(new ItemStack(Material.RECORD_10));
+		record10.shape(new String[]{"GCL","CDC","LCG"}).setIngredient('G', Material.WOOL).setIngredient('G', Material.WOOL.getNewData((byte) 13)).setIngredient('L', Material.WOOL).setIngredient('L', Material.WOOL.getNewData((byte) 5)).setIngredient('C', Material.COAL).setIngredient('D', Material.DIAMOND);
+		Bukkit.getServer().addRecipe(record10);
+		
+		ShapedRecipe record11 = new ShapedRecipe(new ItemStack(Material.RECORD_11));
+		record11.shape(new String[]{"CCC","CDC","CCC"}).setIngredient('C', Material.COAL).setIngredient('D', Material.DIAMOND);
+		Bukkit.getServer().addRecipe(record11);
+		
+		ShapedRecipe record12 = new ShapedRecipe(new ItemStack(Material.RECORD_12));
+		record12.shape(new String[]{"BCB","CDC","BCB"}).setIngredient('B', Material.WOOL).setIngredient('B', Material.WOOL.getNewData((byte) 3)).setIngredient('C', Material.COAL).setIngredient('D', Material.DIAMOND);
+		Bukkit.getServer().addRecipe(record12);
+		
+		ShapelessRecipe grassblock = new ShapelessRecipe(new ItemStack(Material.GRASS));
+	}
+
+	
+	public void onDisable(){
+		Bukkit.getServer().clearRecipes();
+	}
+}
